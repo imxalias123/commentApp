@@ -1,0 +1,32 @@
+/* Write your CSS here */
+.form-element {
+  display: flex;
+  flex-direction: column;
+}
+.text {
+  height: 100px;
+}
+.bg-container {
+  padding: 10px;
+  min-height: 100vh;
+}
+.img {
+  width: 100%;
+}
+.input-name {
+  margin-bottom: 10px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: #dee0e3;
+}
+.text {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-color: #dee0e3;
+}
+.btn {
+  background-color: #0284c7;
+  font-family: 'roboto';
+  width: 120px;
+  height: 30px;
+}
