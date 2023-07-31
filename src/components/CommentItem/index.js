@@ -5,7 +5,7 @@ const CommentItem = props => {
   const {eachDetails} = props
   const {name, isLiked, date, ClassNames, comment} = eachDetails
 
-  const likedorNot = isLiked
+  const likedOrNot = isLiked
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
 
@@ -18,10 +18,10 @@ const CommentItem = props => {
       </div>
       <p>{comment}</p>
       <div>
-        <img src={likedorNot} alt="like" />
+        <img src={likedOrNot} alt="like" />
         <button type="button">
           <img
-            alt="delete"
+            data-testid="delete"
             src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
           />
         </button>

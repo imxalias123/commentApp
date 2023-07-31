@@ -24,6 +24,14 @@
   border-radius: 5px;
   border-color: #dee0e3;
 }
+.heading {
+  font-family: 'roboto';
+  font-size: 50px;
+}
+.para {
+  font-family: 'roboto';
+  font-size: 17px;
+}
 .btn {
   background-color: #0284c7;
   font-family: 'roboto';

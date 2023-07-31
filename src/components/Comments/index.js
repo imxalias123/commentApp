@@ -59,7 +59,7 @@ class Comments extends Component {
     const {comment, name, commentList} = this.state
     return (
       <div className="bg-container">
-        <h1>Comments</h1>
+        <h1 className="heading">Comments</h1>
         <div className="flex-container">
           <img
             className="img"
@@ -67,7 +67,7 @@ class Comments extends Component {
             src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
           />
           <div>
-            <p>Say something about 4.0 Technologies</p>
+            <p className="para">Say something about 4.0 Technologies</p>
             <form className="form-element" onSubmit={this.onAddComment}>
               <input
                 onChange={this.onChangeName}
@@ -80,8 +80,8 @@ class Comments extends Component {
                 placeholder="Your Comment"
                 value={comment}
                 onChange={this.onChangeComment}
-                rows="8"
                 className="text"
+                rows="10"
               />
 
               <button type="submit" className="btn">
