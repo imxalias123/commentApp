@@ -2,7 +2,8 @@
 import './index.css'
 
 const CommentItem = props => {
-  const {name, eachDetails, isLiked, date, ClassNames, id, comment} = props
+  const {eachDetails} = props
+  const {name, isLiked, date, ClassNames, comment} = eachDetails
 
   const likedorNot = isLiked
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
