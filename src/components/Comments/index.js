@@ -29,6 +29,13 @@ class Comments extends Component {
     this.setState({comment: event.target.value})
   }
 
+  onDeleteFunction = id => {
+    const {commentList} = this.state
+    this.setState({
+      commentList: commentList.filter(comment => comment.id !== id),
+    })
+  }
+
   onAddComment = event => {
     event.preventDefault()
     const {name, comment, commentList} = this.state
@@ -97,7 +104,11 @@ class Comments extends Component {
         </p>
         <ul>
           {commentList.map(each => (
-            <CommentItem key={each.id} eachDetails={each} />
+            <CommentItem
+              key={each.id}
+              eachDetails={each}
+              onDeleteFunction={this.onDeleteFunction}
+            />
           ))}
         </ul>
       </div>

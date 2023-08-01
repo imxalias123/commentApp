@@ -2,9 +2,11 @@
 import './index.css'
 
 const CommentItem = props => {
-  const {eachDetails} = props
-  const {name, isLiked, date, ClassNames, comment} = eachDetails
-
+  const {eachDetails, onDeleteFunction} = props
+  const {id, name, isLiked, date, ClassNames, comment} = eachDetails
+  const onClickDelete = () => {
+    onDeleteFunction(id)
+  }
   const likedOrNot = isLiked
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
@@ -19,7 +21,7 @@ const CommentItem = props => {
       <p>{comment}</p>
       <div>
         <img src={likedOrNot} alt="like" />
-        <button type="button">
+        <button type="button" onClick={onClickDelete}>
           <img
             data-testid="delete"
             src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
