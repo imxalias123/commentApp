@@ -1,5 +1,6 @@
 import {Component} from 'react'
-import {v4 as uuidv4} from 'uuid'
+
+import {v4} from 'uuid'
 import './index.css'
 import CommentItem from '../CommentItem'
 
@@ -47,7 +48,7 @@ class Comments extends Component {
       ]
 
     const newComment = {
-      id: uuidv4(),
+      id: v4(),
       name,
       comment,
       commentList,
@@ -57,6 +58,7 @@ class Comments extends Component {
     }
     this.setState(prevState => ({
       commentList: [...prevState.commentList, newComment],
+
       name: '',
       comment: '',
     }))

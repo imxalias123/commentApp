@@ -1,5 +1,6 @@
 // Write your code here
 import './index.css'
+import {formatDistanceToNow} from 'date-fns'
 
 const CommentItem = props => {
   const {eachDetails, onDeleteFunction} = props
@@ -11,18 +12,21 @@ const CommentItem = props => {
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
 
+  const time = formatDistanceToNow(date)
+
   return (
     <li>
       <div className={ClassNames}>
-        <p className="initial">{name[0]}</p>
+        <p className="initial">{name[0].toUpperCase()}</p>
         <p className="name">{name}</p>
-        <p className="date">{date}</p>
+        <p className="date">{time}</p>
       </div>
       <p>{comment}</p>
       <div>
         <img src={likedOrNot} alt="like" />
-        <button type="button" onClick={onClickDelete}>
+        <button type="button" data-testid="delete" onClick={onClickDelete}>
           <img
+            alt="delete"
             data-testid="delete"
             src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
           />
