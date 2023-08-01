@@ -27,7 +27,6 @@ const CommentItem = props => {
         <button type="button" data-testid="delete" onClick={onClickDelete}>
           <img
             alt="delete"
-            data-testid="delete"
             src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
           />
         </button>
