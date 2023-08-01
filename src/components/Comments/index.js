@@ -21,6 +21,14 @@ class Comments extends Component {
     comment: '',
   }
 
+  onChangeName = event => {
+    this.setState({name: event.target.value})
+  }
+
+  onChangeComment = event => {
+    this.setState({comment: event.target.value})
+  }
+
   onAddComment = event => {
     event.preventDefault()
     const {name, comment, commentList} = this.state
@@ -45,14 +53,6 @@ class Comments extends Component {
       name: '',
       comment: '',
     }))
-  }
-
-  onChangeName = event => {
-    this.setState({name: event.target.value})
-  }
-
-  onChangeComment = event => {
-    this.setState({comment: event.target.value})
   }
 
   render() {
@@ -93,6 +93,7 @@ class Comments extends Component {
         <hr className="hr-line" />
         <p>
           <span className="commentCount">{commentList.length}</span>
+          Comment
         </p>
         <ul>
           {commentList.map(each => (

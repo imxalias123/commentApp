@@ -12,7 +12,7 @@ const CommentItem = props => {
   return (
     <li>
       <div className={ClassNames}>
-        <p className="initial">{name[0].toUpperCase()}</p>
+        <p className="initial">{name[0]}</p>
         <p className="name">{name}</p>
         <p className="date">{date}</p>
       </div>
