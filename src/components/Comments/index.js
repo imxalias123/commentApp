@@ -30,6 +30,17 @@ class Comments extends Component {
     this.setState({comment: event.target.value})
   }
 
+  updateLike = id => {
+    this.setState(prevState =>
+      prevState.commentList.map(eachComment => {
+        if (eachComment.id === id) {
+          return {...eachComment, isLiked: !eachComment.isLiked}
+        }
+        return {eachComment}
+      }),
+    )
+  }
+
   onDeleteFunction = id => {
     const {commentList} = this.state
     this.setState({
@@ -110,6 +121,7 @@ class Comments extends Component {
               key={each.id}
               eachDetails={each}
               onDeleteFunction={this.onDeleteFunction}
+              updateLike={this.updateLike}
             />
           ))}
         </ul>
