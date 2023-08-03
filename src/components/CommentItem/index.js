@@ -31,16 +31,24 @@ const CommentItem = props => {
       </div>
       <p className="comment">{comment}</p>
 
-      <div>
-        <img src={likedOrNot} alt="like" />
+      <div className="button-flex">
+        <div>
+          <img src={likedOrNot} alt="like" />
+          <button
+            className={`like ${likedClassName}`}
+            type="button"
+            onClick={onClickLike}
+          >
+            Like
+          </button>
+        </div>
+
         <button
-          className={`like ${likedClassName}`}
+          className="delete"
           type="button"
-          onClick={onClickLike}
+          onClick={onClickDelete}
+          data-testid="delete"
         >
-          Like
-        </button>
-        <button type="button" onClick={onClickDelete} data-testid="delete">
           <img
             alt="delete"
             src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"

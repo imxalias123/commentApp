@@ -31,14 +31,14 @@ class Comments extends Component {
   }
 
   updateLike = id => {
-    this.setState(prevState =>
-      prevState.commentList.map(eachComment => {
+    this.setState(prevState => ({
+      commentList: prevState.commentList.map(eachComment => {
         if (eachComment.id === id) {
           return {...eachComment, isLiked: !eachComment.isLiked}
         }
         return {eachComment}
       }),
-    )
+    }))
   }
 
   onDeleteFunction = id => {

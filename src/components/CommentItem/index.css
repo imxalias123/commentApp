@@ -57,6 +57,7 @@ li {
 .like {
   border: 0px;
   background-color: white;
+  outline: none;
 }
 
 .comment {
@@ -65,4 +66,12 @@ li {
 }
 .buttonOn {
   color: #0b69ff;
+}
+.button-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.delete {
+  border: 0px;
+  background-color: white;
 }
